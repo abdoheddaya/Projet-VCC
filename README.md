@@ -62,7 +62,7 @@ L'architecture déployée repose sur le modèle client-serveur où un serveur Wa
 
 ### 2.2 Schéma d'architecture
 
-![Schéma d'architecture du projet Wazuh SIEM/EDR](https://claude.ai/chat/architecture-schema.png)
+![Schéma d'architecture du projet Wazuh SIEM/EDR](architecture-schema.png)
 
 _Figure 1 : Schéma d'architecture du projet Wazuh SIEM/EDR_
 
@@ -251,11 +251,11 @@ Une fois l'instance lancée :
     -   **Private IPv4 address :** exemple 172.31.29.180
     -   **Public IPv4 address :** exemple 54.123.45.67
 
-![Security Group du serveur Wazuh](https://claude.ai/chat/WAZUHSG.png)
+![Security Group du serveur Wazuh](WAZUHSG.png)
 
 _Figure 2 : Security Group du serveur Wazuh_
 
-![Instance Wazuh Server dans AWS EC2](https://claude.ai/chat/1.png)
+![Instance Wazuh Server dans AWS EC2](1.png)
 
 _Figure 3 : Instance Wazuh Server dans AWS EC2_
 
@@ -280,11 +280,11 @@ _Figure 3 : Instance Wazuh Server dans AWS EC2_
 
 > **Note :** Seul le port SSH est nécessaire pour l'administration. L'agent Wazuh initie les connexions sortantes vers le serveur.
 
-![Security Group du client Linux](https://claude.ai/chat/WINDOWSSG.png)
+![Security Group du client Linux](WINDOWSSG.png)
 
 _Figure 4 : Security Group du client Linux_
 
-![Instance Linux Client](https://claude.ai/chat/3.png)
+![Instance Linux Client](3.png)
 
 _Figure 5 : Instance Linux Client_
 
@@ -308,11 +308,11 @@ _Figure 5 : Instance Linux Client_
 |--------|------|-----------|--------|
 | RDP    | 3389 | TCP       | My IP  |
 
-![Security Group du client Windows](https://claude.ai/chat/LINUXSG.png)
+![Security Group du client Windows](LINUXSG.png)
 
 _Figure 6 : Security Group du client Windows_
 
-![Instance Windows Client](https://claude.ai/chat/2.png)
+![Instance Windows Client](2.png)
 
 _Figure 7 : Instance Windows Client_
 
@@ -331,7 +331,7 @@ Le mot de passe administrateur Windows est chiffré et doit être déchiffré av
 7.  Le mot de passe s'affiche → le copier et le noter
 8.  Username : **Administrator**
 
-![Récupération du mot de passe Windows via la console AWS](https://claude.ai/chat/PASSWORD.png)
+![Récupération du mot de passe Windows via la console AWS](PASSWORD.png)
 
 _Figure 8 : Récupération du mot de passe Windows via la console AWS_
 
@@ -452,7 +452,7 @@ Password: ChBidg89A.Qwr8LhZw+2t?vJyhoJPHG
 > -   Le copier dans le fichier notes
 > -   Il sera nécessaire pour accéder au dashboard
 
-![Installation du serveur Wazuh en cours](https://claude.ai/chat/6.png)
+![Installation du serveur Wazuh en cours](6.png)
 
 _Figure 9 : Installation du serveur Wazuh en cours_
 
@@ -510,7 +510,7 @@ Le navigateur affichera un avertissement de sécurité car le certificat SSL est
 
 Vous arrivez sur le Dashboard Wazuh :
 
-![Dashboard Wazuh après première connexion](https://claude.ai/chat/7.png)
+![Dashboard Wazuh après première connexion](7.png)
 
 _Figure 10 : Dashboard Wazuh après première connexion_
 
@@ -618,11 +618,11 @@ sudo systemctl status wazuh-agent
     -   IP address
     -   Last keep alive
 
-![Agent Linux actif et connecté](https://claude.ai/chat/10.png)
+![Agent Linux actif et connecté](10.png)
 
 _Figure 11 : Agent Linux actif et connecté_
 
-![Apparition de l'agent Linux dans le Dashboard](https://claude.ai/chat/9.png)
+![Apparition de l'agent Linux dans le Dashboard](9.png)
 
 _Figure 12 : Apparition de l'agent Linux dans le Dashboard_
 
@@ -641,15 +641,15 @@ _Figure 12 : Apparition de l'agent Linux dans le Dashboard_
     -   Username : `Administrator`
     -   Password : [mot de passe récupéré section 3.3.3]
 
-![Configuration de la connexion Bureau à distance](https://claude.ai/chat/Windowsetape1.png)
+![Configuration de la connexion Bureau à distance](Windowsetape1.png)
 
 _Figure 13 : Configuration de la connexion Bureau à distance_
 
-![Avertissement de sécurité lors de la connexion](https://claude.ai/chat/Windowsetape2.png)
+![Avertissement de sécurité lors de la connexion](Windowsetape2.png)
 
 _Figure 14 : Avertissement de sécurité lors de la connexion_
 
-![Bureau Windows Server 2022 accessible](https://claude.ai/chat/Windowsetape3.png)
+![Bureau Windows Server 2022 accessible](Windowsetape3.png)
 
 _Figure 15 : Bureau Windows Server 2022 accessible_
 
@@ -697,7 +697,7 @@ msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q `
 5.  L'installation est silencieuse (pas de fenêtre)
     
 
-![Installation de l'agent Wazuh via PowerShell](https://claude.ai/chat/Windowsetape4.png)
+![Installation de l'agent Wazuh via PowerShell](Windowsetape4.png)
 
 _Figure 16 : Installation de l'agent Wazuh via PowerShell_
 
@@ -722,7 +722,7 @@ Get-Service WazuhSvc
     -   Windows-Client
 4.  Cliquer sur "Windows-Client" pour les détails
 
-![Agent Windows actif dans le Dashboard](https://claude.ai/chat/11.png)
+![Agent Windows actif dans le Dashboard](11.png)
 
 _Figure 17 : Agent Windows actif dans le Dashboard_
 
@@ -799,7 +799,7 @@ cd C:\Users\Administrator\Downloads\Sysmon
 
 ```
 
-![Installation de Sysmon via PowerShell](https://claude.ai/chat/Sysmonetape1.png)
+![Installation de Sysmon via PowerShell](Sysmonetape1.png)
 
 _Figure 18 : Installation de Sysmon via PowerShell_
 
@@ -819,7 +819,7 @@ Get-Service Sysmon64
 
 ```
 
-![Service Sysmon64 actif et fonctionnel](https://claude.ai/chat/Sysmonetape2.png)
+![Service Sysmon64 actif et fonctionnel](Sysmonetape2.png)
 
 _Figure 19 : Service Sysmon64 actif et fonctionnel_
 
@@ -1035,7 +1035,7 @@ Si plusieurs tentatives depuis la même IP :
 -   **Rule ID :** 5712 (Multiple authentication failures)
 -   **Level :** 10 (High severity) - ALERTE CRITIQUE
 
-![Détection de tentatives SSH échouées - Scénario Brute Force](https://claude.ai/chat/bruteforce.png)
+![Détection de tentatives SSH échouées - Scénario Brute Force](bruteforce.png)
 
 _Figure 20 : Détection de tentatives SSH échouées - Scénario Brute Force_
 
@@ -1083,7 +1083,7 @@ agent.name:"Linux-Client" AND rule.groups:elevation_privilege
 -   **Command :** La commande exécutée avec sudo
 -   **User :** ubuntu
 
-![Détection de l'utilisation de sudo et élévation vers root](https://claude.ai/chat/sudoSU.png)
+![Détection de l'utilisation de sudo et élévation vers root](sudoSU.png)
 
 _Figure 21 : Détection de l'utilisation de sudo et élévation vers root_
 
@@ -1136,7 +1136,7 @@ agent.name:"Linux-Client" AND rule.groups:syscheck
 -   **Changes :** Size, modification time, checksum
 -   **Before/After :** Hashes MD5/SHA1 avant et après modification
 
-![Détection de modification du fichier /etc/passwd par File Integrity Monitoring](https://claude.ai/chat/FIMerror.png)
+![Détection de modification du fichier /etc/passwd par File Integrity Monitoring](FIMerror.png)
 
 _Figure 22 : Détection de modification du fichier /etc/passwd par File Integrity Monitoring_
 
@@ -1191,7 +1191,7 @@ agent.name:"Windows-Client" AND data.win.system.eventID:4625
 -   **Failure Reason :** Bad password
 -   **Source IP :** Votre adresse IP
 
-![Détection de tentatives de connexion RDP échouées sur Windows](https://claude.ai/chat/LoginRDP.png)
+![Détection de tentatives de connexion RDP échouées sur Windows](LoginRDP.png)
 
 _Figure 23 : Détection de tentatives de connexion RDP échouées sur Windows_
 
